@@ -30,15 +30,7 @@ GNU General Public License for more details.
 #define EMPTY_STRINGS_50 EMPTY_STRINGS_20, EMPTY_STRINGS_20, EMPTY_STRINGS_10
 #define EMPTY_STRINGS_100 EMPTY_STRINGS_50, EMPTY_STRINGS_50
 
-struct MenuStringsEquality
-{
-	bool operator()( const char *a, const char *b ) const
-	{
-		return !stricmp( a, b );
-	}
-};
-
-static CUtlHashMap<const char *, const char *, MenuStringsEquality, HashFunctorStringCaseless> hashed_cmds;
+static CUtlHashMap<const char *, const char *> hashed_cmds;
 
 const char *MenuStrings[IDS_LAST] =
 {

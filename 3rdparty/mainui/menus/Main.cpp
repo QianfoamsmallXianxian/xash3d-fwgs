@@ -271,7 +271,7 @@ void CMenuMain::_Init( void )
 
 	if( FBitSet( gMenu.m_gameinfo.flags, GFL_ANIMATED_TITLE ))
 	{
-		if( !uiStatic.lowmemory && animatedBanner.TryLoad())
+		if( animatedBanner.TryLoad())
 			AddItem( animatedBanner );
 	}
 	else
